@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .side{
+        display: flex;
+        align-items: flex-start;
+    }
+    input{
+        width: 25px;
+        height: 25px;
+    }
+    canvas{
+        margin: 4px;
+        padding: 4px;
+    }
+    p{
+        margin: 4px;
+        padding: 4px;
+    }
+    td{
+        font-size: 1.2rem;
+        font-weight:700;
+    }
+    </style>
+<script>
+    let count=0;
+    let sum=0;
+    let sum1=0;
+    let c =1,c1=1,c2=1,c3=1,c4=1,c5=1,c6=1,c7=1,c8=1,c9=1,c10=1,c11=1,c12=1,c13=1,c14=1;
+    let cf=0,cf1=0,cf2=0,cf3=1,cf4=1,cf5=1,cf6=1,cf7=1,cf8=1,cf9=1,cf10=1,cf11=1,cf12=1,cf13=1,cf14=1;
+    function add(){
+        add2();
+        let ta = document.getElementById("ta");
+        for (let i=0; i< 15; i++ ){
+            let tr = document.createElement("tr");
+            tr.id = "color"+i;
+            for (let j=0; j < 3; j++){
+                let td = document.createElement("td");
+                if(count==0){
+                    let input = document.createElement("input");
+                    input.type ="checkbox";
+                    if (i==0){
+                        input.onmousedown = toukou;
+                    }
+                    if (i==1){
+                        input.onmousedown = toukou1;
+                    }
+                    if (i==2){
+                        input.onmousedown = toukou2;
+                    }
+                    if (i==3){
+                        input.onmousedown = toukou3;
+                    }
+                    if (i==4){
+                        input.onmousedown = toukou4;
+                    }
+                    if (i==5){
+                        input.onmousedown = toukou5;
+                    }
+                    if (i==6){
+                        input.onmousedown = toukou6;
+                    }
+                    if (i==7){
+                        input.onmousedown = toukou7;
+                    }
+                    if (i==8){
+                        input.onmousedown = toukou8;
+                    }
+                    if (i==9){
+                        input.onmousedown = toukou9;
+                    }
+                    if (i==10){
+                        input.onmousedown = toukou10;
+                    }
+                    if (i==11){
+                        input.onmousedown = toukou11;
+                    }
+                    if (i==12){
+                        input.onmousedown = toukou12;
+                    }
+                    if (i==13){
+                        input.onmousedown = toukou13;
+                    }
+                    if (i==14){
+                        input.onmousedown = toukou14;
+                    }
+                    input.onclick= ninnzuu1;
+                    td.appendChild(input);
+                }
+                if(count==1){
+                    td.style.width = "150px";
+                    td.style.height = "30px";
+                    td.contentEditable = "true"
+                }
+                if(count==2){
+                    let select = document.createElement("select");
+                    let option = document.createElement("option");
+                    let op2 = document.createElement("option");
+                    let op3 = document.createElement("option");
+                    let op4 = document.createElement("option");
+                    let op5 = document.createElement("option");
+                    option.textContent = "ー";
+                    op2.textContent = "教室"
+                    op3.textContent = "スカイホール"
+                    op4.textContent = "園庭"
+                    op5.textContent = "お散歩"
+                    select.appendChild(option);
+                    select.appendChild(op2);
+                    select.appendChild(op3);
+                    select.appendChild(op4);
+                    select.appendChild(op5);
+                    td.appendChild(select);
+                }
+                count++;
+                tr.appendChild(td);
+            }
+            count=0;
+            ta.appendChild(tr);
+        } 
+    }
+    function toukou(){
+        tr = document.getElementById("color0");
+        
+        if (c%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c++;
+    }
+    function toukou1(){
+        tr = document.getElementById("color1");
+        
+        if (c1%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c1%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c1++;
+    }
+    function toukou2(){
+        tr = document.getElementById("color2");
+        if (c2%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c2%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c2++;
+    }
+    function toukou3(){
+        tr = document.getElementById("color3");
+        if (c3%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c3%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c3++;
+    }
+    function toukou4(){
+        tr = document.getElementById("color4");
+        if (c4%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c4%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c4++;
+    }
+    function toukou5(){
+        tr = document.getElementById("color5");
+        if (c5%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c5%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c5++;
+    }
+    function toukou6(){
+        tr = document.getElementById("color6");
+        if (c6%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c6%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c6++;
+    } 
+    function toukou7(){
+        tr = document.getElementById("color7");
+        if (c7%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c7%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c7++;
+    } 
+    function toukou8(){
+        tr = document.getElementById("color8");
+        if (c8%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c8%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c8++;
+    }
+    function toukou9(){
+        tr = document.getElementById("color9");
+        if (c9%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c9%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c9++;
+    }
+    function toukou10(){
+        tr = document.getElementById("color10");
+        if (c10%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c10%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c10++;
+    }
+    function toukou11(){
+        tr = document.getElementById("color11");
+        if (c11%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c11%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c11++;
+    }
+    function toukou12(){
+        tr = document.getElementById("color12");
+        if (c12%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c12%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c12++;
+    }
+    function toukou13(){
+        tr = document.getElementById("color13");
+        if (c13%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c13%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c13++;
+    }
+    function toukou14(){
+        tr = document.getElementById("color14");
+        if (c14%2==1){
+            tr.style.backgroundColor = "rgb(30, 208, 255)";
+            sum1++;
+        }
+        if (c14%2==0){
+            tr.style.backgroundColor = "white";
+            sum1--;
+        }
+        c14++;
+    }
+    function ninnzuu1(){
+       document.getElementById("da").textContent = sum1 + "人"
+    }
+    function add2(){
+        let ta = document.getElementById("tb");
+        for (let i=0; i< 15; i++ ){
+            let tr = document.createElement("tr");
+            tr.id = "c"+i;
+            for (let j=0; j < 3; j++){
+                let td = document.createElement("td");
+                if(count==0){
+                    let input = document.createElement("input");
+                    input.type ="checkbox";
+                    if(i==0){
+                        input.onmousedown = t0;
+                    }
+                    if(i==1){
+                        input.onmousedown = t1;
+                    }
+                    if(i==2){
+                        input.onmousedown = t2;
+                    }
+                    if(i==3){
+                        input.onmousedown = t3;
+                    }
+                    if(i==4){
+                        input.onmousedown = t4;
+                    }
+                    if(i==5){
+                        input.onmousedown = t5;
+                    }
+                    if(i==6){
+                        input.onmousedown = t6;
+                    }
+                    if(i==7){
+                        input.onmousedown = t7;
+                    }
+                    if(i==8){
+                        input.onmousedown = t8;
+                    }
+                    if(i==9){
+                        input.onmousedown = t9;
+                    }
+                    if(i==10){
+                        input.onmousedown = t10;
+                    }
+                    if(i==11){
+                        input.onmousedown = t11;
+                    }
+                    if(i==12){
+                        input.onmousedown = t12;
+                    }
+                    if(i==13){
+                        input.onmousedown = t13;
+                    }
+                    if(i==14){
+                        input.onmousedown = t14;
+                    }
+                    input.onclick= ninnzuu;
+                    td.appendChild(input);
+                }
+                if(count==1){
+                    td.style.width = "150px";
+                    td.style.height = "30px";
+                    td.contentEditable = "true"
+                }
+                if(count==2){
+                    let select = document.createElement("select");
+                    let option = document.createElement("option");
+                    let op2 = document.createElement("option");
+                    let op3 = document.createElement("option");
+                    let op4 = document.createElement("option");
+                    let op5 = document.createElement("option");
+                    option.textContent = "ー";
+                    op2.textContent = "教室"
+                    op3.textContent = "スカイホール"
+                    op4.textContent = "園庭"
+                    op5.textContent = "お散歩"
+                    select.appendChild(option);
+                    select.appendChild(op2);
+                    select.appendChild(op3);
+                    select.appendChild(op4);
+                    select.appendChild(op5);
+                    td.appendChild(select);
+                }
+                count++;
+                tr.appendChild(td);
+            }
+            count=0;
+            tb.appendChild(tr);
+        } 
+    }
+    
+    function t0(){
+        cf++;
+        tr = document.getElementById("c0");
+        if (cf%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+    }
+    function t1(){
+        cf1++;
+        tr = document.getElementById("c1");
+        if (cf1%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf1%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+    }
+    function t2(){
+        cf2++;
+        tr = document.getElementById("c2");
+        if (cf2%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf2%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+    }
+    function t3(){
+        tr = document.getElementById("c3");
+        if (cf3%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf3%2==0){
+            tr.style.backgroundColor="white"
+            sum--;
+        }
+        cf3++;
+    }
+    function t4(){
+        tr = document.getElementById("c4");
+        if (cf4%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf4%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf4++;
+    }
+    function t5(){
+        tr = document.getElementById("c5");
+        if (cf5%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf5%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf5++;
+    }
+    function t6(){
+        tr = document.getElementById("c6");
+        if (cf6%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf6%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf6++;
+    }
+    function t7(){
+        tr = document.getElementById("c7");
+        if (cf7%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf7%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf7++;
+    }
+    function t8(){
+        tr = document.getElementById("c8");
+        if (cf8%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf8%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf8++;
+    }
+    function t9(){
+        tr = document.getElementById("c9");
+        if (cf9%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf9%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf9++;
+    }
+    function t10(){
+        tr = document.getElementById("c10");
+        if (cf10%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf10%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf10++;
+    }
+    function t11(){
+        tr = document.getElementById("c11");
+        if (cf11%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++
+        }
+        if (cf11%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf11++;
+    }
+    function t12(){
+        tr = document.getElementById("c12");
+        if (cf12%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf12%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf12++;
+    }
+    function t13(){
+        tr = document.getElementById("c13");
+        if (cf13%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf13%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf13++;
+    }
+    function t14(){
+        tr = document.getElementById("c14");
+        if (cf14%2==1){
+            tr.style.backgroundColor="rgb(237, 119, 152)";
+            sum++;
+        }
+        if (cf14%2==0){
+            tr.style.backgroundColor="white";
+            sum--;
+        }
+        cf14++;
+    }
+    function ninnzuu(){
+        document.getElementById("jo").textContent = sum + "人";
+
+    }
+</script>
+<body onload="add()">
+    <h1 contenteditable="true">＿＿＿組</h1>
+    <div class="side">
+        <h2>男子　<span id="da"></span></h2> <h2>　　　　　　　　　　　　　　女子　<spam id="jo"></spam></h2></div>
+    <div class="side">
+    <table id="ta" border="1">
+    <tr>
+        <td>登園</td>
+        <td id="selu">名前</td>
+        <td id="selu">場所を選択</td>
+    </tr>
+    </table>
+    <h1>　　</h1>
+    <table id="tb" border="1">
+        <tr>
+            <td>登園</td>
+            <td id="selu">名前</td>
+            <td id="selu">場所を選択</td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
